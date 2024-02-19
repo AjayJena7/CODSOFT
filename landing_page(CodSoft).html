@@ -1,245 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Getaways Explore the Extraordinary</title>
+    <title>YatriWays - Landing Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-Z5SziK6To/B8+UjAweOWIHprI7B0Gziz7thbOjh7w9snZgy8J+FqpDAU6Ij4p5Fo" crossorigin="anonymous">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
+            font-family: 'Arial', sans-serif;
+            background-image: url('file:///C:/Users/Ajay/OneDrive/Pictures/Asset-img/fant1.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         header {
-            background-color: #2c3e50;
-            color: #ecf0f1;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
             text-align: center;
-            padding: 2em 0;
-            position: relative;
-            animation: fadeInDown 1s ease-in-out;
+            position: fixed;
+            width: 100%;
+            z-index: 1;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1em;
         }
 
         nav {
             display: flex;
             justify-content: center;
-            margin-top: 15px;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            margin-top: 80px; /* Adjusting margin to prevent overlap on header */
         }
 
         nav a {
+            color: #f3c726;
             text-decoration: none;
-            color: #ecf0f1;
-            margin: 0 20px;
-            font-weight: bold;
-            font-size: 18px;
-            transition: color 0.3s ease-in-out;
+            padding: 14px 20px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
         }
 
         nav a:hover {
-            color: #3498db;
-        }
-
-        .book-now {
-            position: absolute;
-            top: 1.5em;
-            right: 1.5em;
-            background-color: #3498db;
-            padding: 12px 24px;
-            border-radius: 5px;
-            text-decoration: none;
-            color: #ecf0f1;
-            font-weight: bold;
-            transition: background-color 0.3s ease-in-out;
-            animation: fadeInUp 1s ease-in-out;
-        }
-
-        .book-now:hover {
-            background-color: #2980b9;
+            background-color: rgba(255, 255, 255, 0.2);
         }
 
         section {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 40px;
-            background-color: #ecf0f1;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            animation: fadeIn 1s ease-in-out;
-        }
-
-        h2 {
-            color: #e74c3c;
+            padding: 50px;
             text-align: center;
-            margin-bottom: 20px;
-        }
-
-        p {
-            color: #555;
-            text-align: justify;
-            margin-bottom: 15px;
-        }
-
-        img.content-image,
-        img.image2 {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 20px auto;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 1s ease-in-out;
-        }
-
-        .features {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 40px;
-            animation: fadeIn 1s ease-in-out;
-        }
-
-        .feature {
-            text-align: center;
-            padding: 20px;
-            border-radius: 8px;
-            background-color: #3498db;
-            color: #ecf0f1;
-            transition: background-color 0.3s ease-in-out;
-        }
-
-        .feature:hover {
-            background-color: #2980b9;
         }
 
         footer {
-            background-color: #2c3e50;
-            color: #ecf0f1;
+            background-color: rgba(32, 31, 31, 0.7);
+            color: #fff;
             text-align: center;
-            padding: 1em 0;
-            position: fixed;
+            padding: 10px;
+            position: relative;
             bottom: 0;
             width: 100%;
-            animation: fadeInUp 1s ease-in-out;
+            z-index: 1;
         }
 
-        .footer-links {
+        .social-icons {
             margin-top: 10px;
-            animation: fadeInUp 1s ease-in-out;
         }
 
-        .footer-links a {
+        .social-icons a {
+            color: #fff;
+            margin: 0 10px;
             text-decoration: none;
-            color: #ecf0f1;
-            margin: 0 15px;
-            font-weight: bold;
-            transition: color 0.3s ease-in-out;
+            font-size: 20px;
+            transition: color 0.3s ease;
         }
 
-        .footer-links a:hover {
-            color: #3498db;
-        }
-
-        .container {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .social-icons a:hover {
+            color: #55acee;
         }
     </style>
 </head>
-
 <body>
+
     <header>
-        <div class="container">
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">Features</a>
-                <a href="#">About Us</a>
-                <a href="#">Contact</a>
-            </nav>
-            <div class="book-now">
-                <a href="#" style="text-decoration: none;">Book Now</a>
-            </div>
-        </div>
+        <h1>YatriWays</h1>
+        <p>Discover our services and features. 
+        Contact us for more information or book now for an exciting experience.</p>
     </header>
 
-    <section>
-        <h2>Explore the Extraordinary with Global Getaways</h2>
-        <img class="content-image" src="c:\Users\Ajay\OneDrive\Pictures\Asset-img\pic3.jpg" alt="Travel Destinations">
-        <p>
-            Discover the breathtaking beauty of our featured destination. Immerse yourself in the rich culture and
-            vibrant landscapes that await you on this unforgettable journey.
-        </p>
-        <img class="image2" src="c:\Users\Ajay\OneDrive\Pictures\Asset-img\pic1.jpg" alt="Second Image">
-        <p>
-            Indulge in the charm of this hidden gem. From picturesque views to local delights, every moment promises
-            to be a memory etched in your travel diary.
-        </p>
-        <div class="features">
-            <div class="feature">
-                <h3>Unique Experiences</h3>
-                <p>Immerse yourself in one-of-a-kind adventures tailored just for you.</p>
-            </div>
-            <div class="feature">
-                <h3>Cultural Richness</h3>
-                <p>Explore diverse cultures and create lasting memories with Global Getaways.</p>
-            </div>
-            <div class="feature">
-                <h3>Seamless Adventures</h3>
-                <p>Embark on journeys crafted to perfection, ensuring a smooth and enjoyable experience.</p>
-            </div>
-        </div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+        <a href="#features">Features</a>
+        <a href="#book-now">Book Now</a>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome to Our Page</h2>
+        <p>Your Gateway to Seamless Journeys! Discover, Book, and Embark on Unforgettable Adventures. Explore the World's Most Enchanting Destinations with Ease. 
+            Your Trusted Companion in Travel Planning and Destination Booking Excellence.</p>
     </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Global Getaways. All Rights Reserved.</p>
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Contact Us</a>
-            </div>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
         </div>
+        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
     </footer>
-</body>
 
+</body>
 </html>
