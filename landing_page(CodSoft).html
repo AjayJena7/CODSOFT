@@ -4,123 +4,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Getaways - Explore the Extraordinary</title>
+    <title>Global Getaways Explore the Extraordinary</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
             color: #333;
+            line-height: 1.6;
         }
 
         header {
-            background-color: #b470de;
-            color: #fff;
+            background-color: #2c3e50;
+            color: #ecf0f1;
             text-align: center;
-            padding: 1em;
+            padding: 2em 0;
             position: relative;
+            animation: fadeInDown 1s ease-in-out;
         }
 
         nav {
             display: flex;
             justify-content: center;
-            margin-top: 10px;
+            margin-top: 15px;
         }
 
         nav a {
             text-decoration: none;
-            color: #f7f7f3;
-            margin: 0 15px;
+            color: #ecf0f1;
+            margin: 0 20px;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #3498db;
         }
 
         .book-now {
             position: absolute;
-            top: 1em;
-            right: 1em;
-            background-color: #2980b9;
-            padding: 10px 20px;
+            top: 1.5em;
+            right: 1.5em;
+            background-color: #3498db;
+            padding: 12px 24px;
             border-radius: 5px;
+            text-decoration: none;
+            color: #ecf0f1;
+            font-weight: bold;
+            transition: background-color 0.3s ease-in-out;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .book-now:hover {
+            background-color: #2980b9;
         }
 
         section {
-            max-width: 800px;
+            max-width: 900px;
             margin: 40px auto;
-            padding: 30px;
-            background-color: #fcf9f9;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             overflow: hidden;
+            animation: fadeIn 1s ease-in-out;
         }
 
-        h1,
         h2 {
-            color: #da1d13;
+            color: #e74c3c;
             text-align: center;
+            margin-bottom: 20px;
         }
 
         p {
-            line-height: 1.6;
             color: #555;
             text-align: justify;
+            margin-bottom: 15px;
         }
 
-        img.content-image {
-            max-width: 45%;
-            height: auto;
-            display: block;
-            margin: 20px 2.5%;
-            float: left;
-        }
-
+        img.content-image,
         img.image2 {
-            max-width: 45%;
+            max-width: 100%;
             height: auto;
             display: block;
-            margin: 20px 2.5%;
-            float: right;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #3498db;
+            color: #ecf0f1;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .feature:hover {
+            background-color: #2980b9;
         }
 
         footer {
-            background-color: #ed5feb;
-            color: #fff;
+            background-color: #2c3e50;
+            color: #ecf0f1;
             text-align: center;
-            padding: 0.5em;
+            padding: 1em 0;
             position: fixed;
             bottom: 0;
             width: 100%;
-        }
-
-        footer p {
-            margin: 0;
+            animation: fadeInUp 1s ease-in-out;
         }
 
         .footer-links {
-            margin-top: 5px;
+            margin-top: 10px;
+            animation: fadeInUp 1s ease-in-out;
         }
 
         .footer-links a {
             text-decoration: none;
-            color: #fff;
-            margin: 0 10px;
+            color: #ecf0f1;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .footer-links a:hover {
+            color: #3498db;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 
 <body>
     <header>
-        <div class="book-now">
-            <a href="#" style="color: #fff; text-decoration: none; font-weight: bold;">Book Now</a>
+        <div class="container">
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Features</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+            </nav>
+            <div class="book-now">
+                <a href="#" style="text-decoration: none;">Book Now</a>
+            </div>
         </div>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Features</a>
-            <a href="#">About Us</a>
-            <a href="#">Contact</a>
-        </nav>
     </header>
 
     <section>
@@ -135,23 +214,30 @@
             Indulge in the charm of this hidden gem. From picturesque views to local delights, every moment promises
             to be a memory etched in your travel diary.
         </p>
-        <p>
-            Welcome to Global Getaways, where every journey is an invitation to explore the extraordinary. Embark on a
-            seamless adventure, curated for those who seek unparalleled exploration and redefine the art of travel.
-        </p>
-        <p>
-            Our mission is to transform your travel aspirations into reality, offering immersive experiences and
-            cultural richness. Join us on a voyage where every moment is an opportunity for discovery, and every
-            destination is a canvas waiting to be painted with your unique experiences.
-        </p>
+        <div class="features">
+            <div class="feature">
+                <h3>Unique Experiences</h3>
+                <p>Immerse yourself in one-of-a-kind adventures tailored just for you.</p>
+            </div>
+            <div class="feature">
+                <h3>Cultural Richness</h3>
+                <p>Explore diverse cultures and create lasting memories with Global Getaways.</p>
+            </div>
+            <div class="feature">
+                <h3>Seamless Adventures</h3>
+                <p>Embark on journeys crafted to perfection, ensuring a smooth and enjoyable experience.</p>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Global Getaways. All Rights Reserved.</p>
-        <div class="footer-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Contact Us</a>
+        <div class="container">
+            <p>&copy; 2024 Global Getaways. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
         </div>
     </footer>
 </body>
